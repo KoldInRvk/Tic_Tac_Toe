@@ -12,5 +12,9 @@ Working Agreement:
 Allir að vera meðvirkir.
 Ekki gefast upp þó við lendum í vanda. (Googla og spurja um hjálp).
 Láta vita fyrr um daginn ef maður þarf að skreppa á meðan verkefnavinnan stendur yfir.
-
+Vera dugleg að tala og spurja. Góð samskipti.
+Treysta hvort öðru.
+Við erum saman í þessu og hjálpumst öll að.
+Hafa gaman af verkefninu.
+Hvetja hvort annað áfram og vera jákvæð.
 
