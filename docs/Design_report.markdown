@@ -16,4 +16,5 @@ Vera dugleg að tala og spurja. Góð samskipti.
 Treysta hvort öðru.
 Við erum saman í þessu og hjálpumst öll að.
 Hafa gaman af verkefninu.
+Hvetja hvort annað áfram og vera jákvæð.
 
