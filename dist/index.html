@@ -1,21 +1,40 @@
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
+    <meta charset="utf-8" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="./styles.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
 </head>
-
 <body>
-  <!--[if lte IE 9]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
-
-  <p>Hi.</p>
-<script type="text/javascript" src="main.js"></script>
+  <h1>Tic Tac Toe</h1>
+  <div class="container">
+      <p id="turn" >X, it's your turn!</p>
+  <div class="displayed">
+    <table>
+        <tr>
+            <td class="cell" id="1"></td>
+            <td class="cell" id="2"></td>
+            <td class="cell" id="3"></td>
+        </tr>
+        <tr>
+            <td class="cell" id="4"></td>
+            <td class="cell" id="5"></td>
+            <td class="cell" id="6"></td>
+        </tr>
+        <tr>
+            <td class="cell" id="7"></td>
+            <td class="cell" id="8"></td>
+            <td class="cell" id="9"></td>
+            </tr>
+    </table>
+  </div>
+  <div class="winner">
+  <p id="X-points"> X has <span id="counter-x">0</span> <span id="changePointX">points!</span></p>
+  <p id="O-points"> O has <span id="counter-o">0</span> <span id="changePointO">points!</span></p>
+  </div>
+   <button id="button">play again</button>    
+  </div>
+</body>
+<script type="text/javascript" src="./index.js"></script>
+</html>
