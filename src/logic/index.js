@@ -58,7 +58,7 @@ changePointO = document.getElementById("changePointO");
 button.addEventListener('click', function(){
   startgame();
 });
-
+ 
 startgame();
 function startgame(){
   for(var i = 0; i < cells.length; i++){
@@ -73,10 +73,11 @@ function startgame(){
             turn.innerHTML = "O, it's your turn!";
             console.log(x_or_o);
             this.innerHTML = "X";
-              if(winner() === "X"){
+           
+              if(winner()){
                 turn.innerHTML = "X WON!";
                 quit();
-                incrementScore("X");
+                incrementScores();
                 }
                 draw();
             x_or_o += 1;
@@ -86,10 +87,17 @@ function startgame(){
             turn.innerHTML = "X, it's your turn!";
             console.log(x_or_o);
             this.innerHTML = "O";
-              if(winner() === "O"){
+              if(winner()){
                turn.innerHTML = "O WON!";
                 quit();
-                incrementScore("O")
+                if(score_o.innerHTML === '0'){
+                  changePointO.innerHTML = "point!";
+                  score_o.innerHTML = Number(score_o.innerHTML) + 1;
+                }else{
+                  changePointO.innerHTML = "points!";
+                  score_o.innerHTML = Number(score_o.innerHTML) + 1;
+                }
+             
               }
             x_or_o += 1;
           }  
@@ -98,26 +106,33 @@ function startgame(){
     }
 }
  
-function incrementScore(winner){
-    if(winner === "X")
-    {
-        if(score_x.innerHTML === '0'){
-            changePointX.innerHTML = "point!";
-            score_x.innerHTML = Number(score_x.innerHTML) + 1;
-        }
-        else{
-            changePointX.innerHTML = "points!";
-            score_x.innerHTML = Number(score_x.innerHTML) + 1;
-        }
+ 
+function quit(){
+  for(var i = 0; i < cells.length; i++){
+    cells[i].onclick = "";
+  }
+  }
+ 
+ 
+function draw(){
+  var count = 0;
+   for(var i = 0; i < cells.length; i++){
+    if(cells[i].innerHTML !== ""){
+      count += 1;
     }
-    else{
-        if(score_o.innerHTML === '0'){
-            changePointO.innerHTML = "point!";
-            score_o.innerHTML = Number(score_o.innerHTML) + 1;
-        }
-        else{
-            changePointO.innerHTML = "points!";
-            score_o.innerHTML = Number(score_o.innerHTML) + 1;
-        }
-    }
-} 
+    if(!winner()){
+      if(count === 8){
+      turn.innerHTML = "DRAW!";
+    }}
+}
+}
+function incrementScores() {
+ if(score_x.innerHTML === '0'){
+                  changePointX.innerHTML = "point!";
+                  score_x.innerHTML = Number(score_x.innerHTML) + 1;
+                }else{
+                  changePointX.innerHTML = "points!";
+                  score_x.innerHTML = Number(score_x.innerHTML) + 1;
+                }
+               
+              }
